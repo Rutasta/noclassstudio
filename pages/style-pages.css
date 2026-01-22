@@ -126,13 +126,14 @@ body {
     }
     
     .grid-container {
-        padding: 0;
+        padding: 2rem 0rem;
     }
  
     .left-sticky {
       
         padding: 2rem;
         height: auto;
+        width: 100vw;
        
     }
 
@@ -161,7 +162,7 @@ body {
     }
 
     .right img {
-        height: 30rem;
+        height: 10rem;
         width: auto;
     }
 }
