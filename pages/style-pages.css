@@ -18,7 +18,7 @@ body {
 
     margin: 0;
     padding: 0;
-    background-image: url(../texturebackground.png);
+    background-image: url(../landing/texturebackground.png);
     background-blend-mode: soft-light;
     background-blend-mode: multiply;
     background-color: #e3ded9;
