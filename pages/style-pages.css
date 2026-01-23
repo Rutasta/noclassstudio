@@ -72,7 +72,7 @@ body {
     grid-template-columns: 1fr 2fr;
     height: 100vh;
     overflow: auto;
-    padding: 2rem;
+    padding: 0;
     gap: 6rem;
 }
 
@@ -107,7 +107,9 @@ body {
     font-size: 1.3rem;
 }
 
-
+.right {
+    padding: 2rem;
+}
 .right img {
     width: 65vw;
     height: auto;
