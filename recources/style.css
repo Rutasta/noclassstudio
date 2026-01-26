@@ -292,6 +292,8 @@ body {
     inline-size: fit-content;
 
 }
+.about-container {
+    justify-content: left;
 
 .about-container p {
     font-family: "Cochin", serif;
@@ -299,6 +301,11 @@ body {
     padding: 2rem;
 }
 
+.about-container h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    
+}
 
 .about-container-under {
     display: none;
