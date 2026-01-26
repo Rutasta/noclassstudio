@@ -263,7 +263,13 @@ body {
     margin-right: 1.5rem;
 
 }
+.column-about {
+    position: relative;
+    height: 100%;
+    border-right: 1px solid #fff;
+    margin-right: 1.5rem;
 
+}
 .sticky-label,
 .sticky-label-about {
     display: flex;
@@ -292,6 +298,7 @@ body {
     color: #fff;
     padding: 2rem;
 }
+
 
 .about-container-under {
     display: none;
