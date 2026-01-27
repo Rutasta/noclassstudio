@@ -299,13 +299,24 @@ body {
 
 .about-container {
 
-    position: relative;
-    display: block;
-    height: 20rem;
-    border-top: 1px solid #fff;
-    padding: 2rem 4rem;
+     position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    height: 90vh;
+    width: 100vw;
+    transition: transform .5s ease-out;
     background-color: #e3ded9;
-    color: #fff;
+    margin: 0;
+    padding: 5rem 7rem 5rem 5rem;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Important! */
+    background-position: center;
+    border: 1px solid #fff;
 }
 
 
