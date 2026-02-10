@@ -100,11 +100,12 @@ body {
     color: #ffffff;
 }
 
-.left-sticky p {
+p {
     font-family: "cochin", serif;
     text-align: justify;
     color: #ffffff;
     font-size: 1.3rem;
+    padding: 2rem 0;
 }
 
 

@@ -226,8 +226,8 @@ body {
     top: 7rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
-    height: 200vh;
+    width: 100vw;
+    height: 170vh;
 
 
 }
@@ -242,8 +242,8 @@ body {
 }
 
 .images-container img {
-    width: 18rem;
-    padding: 2rem;
+    width: 22rem;
+    padding: 3rem 2rem;
 
 }
 
@@ -285,27 +285,14 @@ body {
 }
 
 
-.about-container p {
-    font-family: "Cochin", serif;
-    color: #fff;
-    padding: 2rem;
-}
-
-.about-container h3 {
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 2rem;
-}
-
 .about-container {
 
-     position: sticky;
+    position: sticky;
     top: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    z-index: 20;
+    z-index: 1;
     height: 90vh;
     width: 100vw;
     transition: transform .5s ease-out;
@@ -319,6 +306,34 @@ body {
     border: 1px solid #fff;
 }
 
+.about-img {
+    padding-left: 8rem;
+}
+
+.about-img img {
+    width: 25rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+
+}
+
+.about-container img:hover {
+    transform: scale(1.7)
+}
+
+.about-container p {
+    font-size: 7rem;
+    line-height: 7rem;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding-right: 3rem;
+    width: 30rem;
+
+
+
+
+}
 
 /* contact form */
 
@@ -477,11 +492,11 @@ button:hover {
 footer {
     position: sticky;
     z-index: 1;
-    height: 30rem;
+    height: 40rem;
     color: #ffffff;
     bottom: 0;
     width: 100vw;
-    padding: 3rem 0;
+    padding: 0;
 }
 
 
@@ -490,9 +505,44 @@ footer {
 
 
     position: relative;
-    height: 30rem;
+    height: 40rem;
 
 
+}
+
+.socials {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 100%;
+    top: 17rem;
+    align-items: center;
+    color: #ce1800;
+    font-family: "cochin", serif;
+    font-weight: 700;
+    padding: 0 2rem;
+    gap: 2rem;
+
+
+}
+
+
+.soc-link a,
+.socials p {
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: #ce1800;
+    display: block;
+    font-family: "cochin", serif;
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.soc-link a:hover {
+    color: #ffffff;
+    transform: scale(1.5);
 }
 
 .footer-content img {
@@ -504,6 +554,7 @@ footer {
 
 
 @media only screen and (max-width: 1199px) {
+
 
     #followImg {
         width: 17rem;
@@ -524,23 +575,31 @@ footer {
 
     .nav-info a {
 
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .images-container img {
-        width: 15rem;
+        width: 20rem;
         padding: 2rem;
 
     }
 
-    .sticky-label p {
+    .about-img {
+        padding-left: 4rem;
+    }
 
-        font-size: 1.1rem;
+    .about-img img {
+        width: 20rem;
+    }
+
+    .about-container p {
+        font-size: 6rem;
+        line-height: 6rem;
 
     }
 
 
-    .contact-content P {
+    .contact-content p {
 
         font-size: 6rem;
         line-height: 6rem;
@@ -571,10 +630,6 @@ footer {
         height: auto;
     }
 
-    .footer-content h2 {
-        font-size: 1.5rem;
-
-    }
 
 }
 
@@ -595,16 +650,12 @@ footer {
 
     .projects {
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        height: 200vh;
-
-
+        height: 150vh;
     }
 
+
     .images-container img {
-        width: 15rem;
+        width: 18rem;
         padding: 2rem;
 
     }
@@ -615,19 +666,36 @@ footer {
 
     }
 
-    .column-about {
-        display: none;
+    .about-container {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 2rem;
+
     }
 
-    .about-container-under {
-        position: relative;
-        display: block;
-        height: 20rem;
-        border-top: 1px solid #fff;
-        padding: 2rem 4rem;
-        background-color: #e3ded9;
-        color: #fff;
+    .about-img {
+        padding: 0;
     }
+
+    .about-img img {
+        width: 20rem;
+    }
+
+    .about-container p {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+
+    }
+
 
     .contact-content {
         position: sticky;
@@ -637,7 +705,7 @@ footer {
         justify-content: center;
         align-items: center;
         margin: 0;
-        padding: 2rem;
+        padding: 2rem 4rem;
 
     }
 
@@ -673,12 +741,7 @@ footer {
         width: 15rem;
     }
 
-    button {
-        display: block;
-        position: absolute;
-        left: 80%;
-        bottom: 20%;
-    }
+
 
     .fingers-bottom {
         left: 20rem;
@@ -689,14 +752,6 @@ footer {
         height: auto;
     }
 
-    .footer-content h2 {
-        font-size: 1.5rem;
-
-    }
-
-    .column .about-container {
-        display: none;
-    }
 
 }
 
@@ -811,12 +866,18 @@ footer {
         display: block;
     }
 
+
     .sticky-label {
         display: none;
     }
 
+
     .footer-content {
-        justify-content: space-between;
+        height: 35rem;
+    }
+
+    footer {
+        height: 35rem;
     }
 
 
@@ -878,7 +939,6 @@ footer {
 
     .flexitems {
         width: 100vw;
-
         padding: 0;
         margin: 0;
     }
@@ -936,7 +996,7 @@ footer {
         left: 0;
         width: 100%;
         height: 2px;
-        border-bottom: 1px solid #ce1800;
+        border-bottom: 2px solid #ce1800;
         background: none;
         transition: transform 0.4s ease, opacity 0.3s ease;
     }
@@ -990,17 +1050,27 @@ footer {
 
 
     .images-container img {
-        height: 13rem;
+        height: 15rem;
         width: auto;
         display: block;
     }
 
-    .about-container-under {
-        width: 100vw;
+    .about-container p {
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
+    .about-img img {
+        width: 20rem;
+        transition: transform 0.2s ease, color 0.2s ease;
+
+    }
+.contact-content {
+    padding: 2rem;
+}
     .contact-content p {
         font-size: 2rem;
+        line-height: 2rem;
     }
 
     label,
@@ -1019,35 +1089,58 @@ footer {
     }
 
     .contact-content button {
-        width: 5rem;
-        height: 3rem;
+        width: 4rem;
+        height: 2.5rem;
 
     }
 
     .fingers-bottom {
-        left: 20%;
+        left: 30%;
     }
-
 
     footer {
-        height: 40vh;
+     
+        height: 30rem;
+     
+    
     }
 
-    .footer-content h2 {
-        font-size: 1rem;
-        padding: .5rem;
+    .footer-content {
+
+        height: 30rem;
+
 
     }
 
-    .footer-content p {
-        font-size: .5rem;
-        padding: .5rem;
+    .socials {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        height: 2rem;
+        width: 100%;
+        top: 17rem;
+        align-items: center;
+        color: #ce1800;
+        font-family: "cochin", serif;
+        font-weight: 700;
+        padding: 0 2rem;
+        gap: 2rem;
+
 
     }
+
+
+    .soc-link a,
+    .socials p {
+     
+        font-size: .7rem;
+
+    }
+
 }
 
-@media (hover: hover) and (pointer: fine) {
-    body {
-        cursor: none;
+    @media (hover: hover) and (pointer: fine) {
+        body {
+            cursor: none;
+        }
     }
-}
