@@ -227,7 +227,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    height: 170vh;
+    height: 190vh;
 
 
 }
@@ -311,19 +311,19 @@ body {
 }
 
 .about-img img {
-    width: 25rem;
+    width: 23rem;
     transition: transform 0.2s ease, color 0.2s ease;
 
 
 }
 
 .about-container img:hover {
-    transform: scale(1.7)
+    transform: scale(1.8)
 }
 
 .about-container p {
-    font-size: 7rem;
-    line-height: 7rem;
+    font-size: 6rem;
+    line-height: 6rem;
     font-family: "Avenir Next", sans-serif;
     font-weight: 700;
     color: #ffffff;
