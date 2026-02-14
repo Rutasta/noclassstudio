@@ -835,7 +835,7 @@ footer {
         overflow-x: auto;
         top: 0;
         padding: 1rem 2rem;
-        -webkit-overflow-scrolling: touch;
+        
     }
 
     .projects .column {
@@ -1048,7 +1048,33 @@ footer {
         padding: 1rem 0;
     }
 
+ .projects {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        height: 80vh;
+        overflow-x: auto;
+        top: 0;
+        padding: 1rem 2rem;
+        
+    }
 
+    .projects .column {
+        display: contents;
+
+    }
+
+    .images-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .images-container a {
+        flex: 0 0 auto;
+
+    }
     .images-container img {
         height: 15rem;
         width: auto;

@@ -25,23 +25,6 @@ function onScroll() {
 window.addEventListener('scroll', onScroll);
 
 
-//main animation 
-document.addEventListener('DOMContentLoaded', () => {
-  const nameMain = document.querySelector('.name-main');
-  const text = nameMain.textContent;
-  nameMain.innerHTML = '';
-
-  // Split into individual spans
-  for (let char of text) {
-    const span = document.createElement('span');
-    span.textContent = char === ' ' ? '\u00A0' : char;
-    nameMain.appendChild(span);
-  }
-});
-
-
-
-
 
 
 // eye
@@ -117,3 +100,33 @@ document.querySelectorAll('.nav-link a').forEach(link => {
     nav.classList.remove('open');
   });
 });
+
+
+
+const items = document.querySelectorAll('.images-container');
+const carousel = document.querySelector('.projects');
+
+function scaleItems() {
+  const centerX = carousel.offsetWidth / 2;
+  
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const itemCenter = rect.left + rect.width / 2;
+    
+    const distance = Math.abs(centerX - itemCenter);
+    
+    // max distance for scaling effect
+    const maxDistance = 200;
+    
+    // scale between 1 and 1.5 depending on distance
+    const scale = Math.max(1, 1.5 - (distance / maxDistance));
+    
+    item.style.transform = `scale(${scale})`;
+  });
+}
+
+// Trigger on scroll
+carousel.addEventListener('scroll', scaleItems);
+
+// Initial call
+scaleItems();
