@@ -227,7 +227,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    height: 190vh;
+    height: 200vh;
 
 
 }
@@ -293,7 +293,7 @@ body {
     flex-direction: row;
     align-items: center;
     z-index: 1;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     transition: transform .5s ease-out;
     background-color: #e3ded9;
@@ -304,10 +304,12 @@ body {
     /* Important! */
     background-position: center;
     border: 1px solid #fff;
+    
 }
 
 .about-img {
     padding-left: 8rem;
+    
 }
 
 .about-img img {
@@ -353,7 +355,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 20;
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     transition: transform .5s ease-out;
     background-color: #e3ded9;
@@ -504,7 +506,7 @@ footer {
 .footer-content {
 
 
-    position: relative;
+   
     height: 40rem;
 
 
@@ -516,7 +518,7 @@ footer {
     flex-direction: row;
     height: 2rem;
     width: 100%;
-    top: 17rem;
+    top: 12.5rem;
     align-items: center;
     color: #ce1800;
     font-family: "cochin", serif;

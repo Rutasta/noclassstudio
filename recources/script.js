@@ -102,31 +102,3 @@ document.querySelectorAll('.nav-link a').forEach(link => {
 });
 
 
-
-const items = document.querySelectorAll('.images-container');
-const carousel = document.querySelector('.projects');
-
-function scaleItems() {
-  const centerX = carousel.offsetWidth / 2;
-  
-  items.forEach(item => {
-    const rect = item.getBoundingClientRect();
-    const itemCenter = rect.left + rect.width / 2;
-    
-    const distance = Math.abs(centerX - itemCenter);
-    
-    // max distance for scaling effect
-    const maxDistance = 200;
-    
-    // scale between 1 and 1.5 depending on distance
-    const scale = Math.max(1, 1.5 - (distance / maxDistance));
-    
-    item.style.transform = `scale(${scale})`;
-  });
-}
-
-// Trigger on scroll
-carousel.addEventListener('scroll', scaleItems);
-
-// Initial call
-scaleItems();
