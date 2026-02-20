@@ -1,5 +1,5 @@
 * {
-    font-size: 16px;
+    font-size: 12px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +19,7 @@ body {
 *::before,
 *::after,
 *:hover {
-    cursor: none !important;
+    cursor: url('tiny-hand.png'), auto !important;
 }
 
 
@@ -102,7 +102,7 @@ body {
 
     font-family: "Avenir next", sans-serif;
     font-size: 4rem;
-    color: #fff;
+    color: #ce1800;
 
 }
 
@@ -110,14 +110,14 @@ body {
 
     margin-bottom: 3rem;
     font-size: 1.6rem;
-    color: #ffffff;
+    color: #ce1800;
 }
 
 p {
     font-family: "cochin", serif;
     text-align: justify;
-    color: #ffffff;
-    font-size: 1.3rem;
+    color: #ce1800;
+    font-size: 1.6rem;
     padding: 2rem 0;
 }
 
