@@ -500,9 +500,10 @@ button:hover {
 
 
 footer {
+    
     position: sticky;
     z-index: 1;
-    height: 40rem;
+    height:40rem;
     color: #ffffff;
     bottom: 0;
     width: 100vw;
@@ -510,15 +511,12 @@ footer {
 }
 
 
-
 .footer-content {
-
-
-
-    height: 40rem;
-
-
+    display: flex;
+    align-items: flex-start;
+    padding-top: 12.5rem;
 }
+
 
 .socials {
     position: absolute;
@@ -526,7 +524,6 @@ footer {
     flex-direction: row;
     height: 2rem;
     width: 100%;
-    top: 12.5rem;
     align-items: center;
     color: #ce1800;
     font-family: "cochin", serif;
