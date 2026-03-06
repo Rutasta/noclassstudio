@@ -28,23 +28,28 @@ body {
 
 
     position: fixed;
-    top: -50vh;
+    top: -50%;
     left: 0;
-    width: 150vw;
-    height: 150vh;
+    width: 150%;
+    height: 150%;
     object-fit: cover;
     pointer-events: none;
     z-index: 999;
     will-change: transform;
     mix-blend-mode: multiply;
+    opacity: 90%;
+    
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
 }
 
 
 
-
-
 #followImg {
-    width: 20rem;
+    width: 25%;
     height: auto;
     position: fixed;
     top: 0;
@@ -66,7 +71,7 @@ body {
 #navbar {
     width: 100%;
     z-index: 10;
-    height: 7rem;
+    height: 20%;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #fff;
@@ -80,7 +85,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 1rem 0rem 1rem 2rem;
+    
 
 }
 
@@ -88,6 +93,7 @@ body {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+    padding: 2rem;
 }
 
 
@@ -128,21 +134,21 @@ body {
 
 .fingers {
     position: relative;
-    top: 3rem;
-    width: 20rem;
-    transform: translateX(15rem);
+    top: 50%;
+    width: 18%;
+    transform: translateX(15%);
     z-index: 11;
 }
 
 .fingers img {
-    width: 15rem;
+    width: 100%;
     height: auto;
 }
 
 .container {
 
     position: relative;
-    height: 7rem;
+    height: 100%;
 
 
 }
@@ -157,10 +163,10 @@ body {
 
 .eye-mask {
     position: absolute;
-    top: 3.5rem;
-    left: 7rem;
-    height: 2rem;
-    width: 5rem;
+    top: 50%;
+    left: 49%;
+    height: 25%;
+    width: 35%;
     overflow: hidden;
     z-index: 5;
     /* this should still be under face */
@@ -182,7 +188,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2rem;
+    width: 40%;
     transform: translate(-50%, -50%);
     transition: transform 0.05s linear;
 }
@@ -190,16 +196,16 @@ body {
 
 .eye-mask2 {
     position: absolute;
-    top: 5rem;
-    left: .5rem;
-    height: 2rem;
-    width: 2rem;
+    top: 70%;
+    left: 4%;
+    height: 25%;
+    width: 30%;
     overflow: hidden;
     z-index: 5;
     /* this should still be under face */
     pointer-events: none;
     /* optional: let mouse events pass through */
-
+background-color: #fff;
 }
 
 .eye2 {
@@ -212,8 +218,8 @@ body {
 .pupil2 {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 2rem;
+    left: 30%;
+    width: 40%;
     transform: translate(-50%, -50%);
     transition: transform 0.05s linear;
 }
@@ -350,6 +356,7 @@ body {
     height: 130vh;
 
 
+
 }
 
 
@@ -361,8 +368,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 20;
-    height: 100vh;
-    width: 100vw;
+    height: 80%;
+    width: 100%;
     transition: transform .5s ease-out;
     background-color: #e3ded9;
     margin: 0;
@@ -483,8 +490,8 @@ button:hover {
 .fingers-bottom {
     position: absolute;
     height: 8rem;
-    bottom: -5rem;
-    left: 50rem;
+    bottom: -11%;
+    left: 50%;
 }
 
 .fingers-bottom img {
@@ -501,7 +508,7 @@ footer {
     
     position: sticky;
     z-index: 1;
-    height: 40rem;
+    height: 70%;
     color: #ffffff;
     bottom: 0;
     width: 100vw;
@@ -512,7 +519,7 @@ footer {
 .footer-content {
     display: flex;
     align-items: flex-start;
-    padding-top: 12.5rem;
+    top: 0;
 }
 
 
@@ -520,6 +527,7 @@ footer {
     position: absolute;
     display: flex;
     flex-direction: row;
+    top: 35%;
     height: 2rem;
     width: 100%;
     align-items: center;
@@ -637,6 +645,7 @@ footer {
 
 
 }
+
 
 @media only screen and (max-width: 991px) {
     #followImg {
@@ -912,7 +921,7 @@ footer {
         display: block;
     }
 
-    /* NAVBAR */
+    NAVBAR 
     #navbar {
         z-index: 111;
         position: fixed;
@@ -961,6 +970,7 @@ footer {
 
 
     /* LOGO */
+
     .logo img {
         width: 1.5rem;
     }

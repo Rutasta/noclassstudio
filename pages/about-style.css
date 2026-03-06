@@ -29,13 +29,14 @@ body {
     position: fixed;
     top: -50vh;
     left: 0;
-    width: 150vw;
-    height: 150vh;
+    width: 150%;
+    height: 150%;
     object-fit: cover;
     pointer-events: none;
     z-index: 999;
     will-change: transform;
     mix-blend-mode: multiply;
+    opacity: 85%;
 }
 
 
@@ -80,50 +81,279 @@ body {
     height: auto;
 }
 
-.grid-container {
+main {
+
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
-    overflow: auto;
-    padding: 2rem;
-    gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
 }
 
 .left-sticky {
-    position: sticky;
-    top: 0;
-    height: 60vh;
-    padding: 4rem 1rem;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    position: relative;
+    display: block;
+
+}
+
+.person-wrapper {
+    position: relative;
+    width: 40vw;
+
+    /* or whatever size */
+}
+
+.person {
+    width: 100%;
+    display: block;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.eye-mask {
+    position: absolute;
+    top: 46%;
+    left: 33%;
+    height: 5%;
+    width: 8%;
+    overflow: hidden;
+    z-index: 1;
+    /* this should still be under face */
+    pointer-events: none;
+    /* optional: let mouse events pass through */
+    background-color: #e3ded9;
 
 
 }
 
-.left-sticky h1 {
+.eye {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.pupil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear;
+}
+
+.eye-mask2 {
+    position: absolute;
+    top: 47.5%;
+    left: 47%;
+    height: 4%;
+    width: 8%;
+    overflow: hidden;
+    z-index: 1;
+    /* this should still be under face */
+    pointer-events: none;
+    /* optional: let mouse events pass through */
+    background-color: #e3ded9;
+
+
+}
+
+.eye2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.pupil2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear;
+}
+
+
+.hand {
+    position: absolute;
+    width: 140%;
+    /* size relative to container */
+
+    /* Use percentages instead of px */
+    top: 90%;
+    left: -20%;
+    rotate: calc(-20deg);
+    transform-origin: left bottom;
+
+    z-index: 3;
+}
+
+.hand:hover {
+    animation: wobble 1s infinite alternate;
+    transform: scale(1.2);
+}
+
+@keyframes wobble {
+    from {
+        transform: scale(1.2) rotate(3deg);
+        top: 100%;
+        left: -40%;
+    }
+
+    to {
+        transform: scale(1.2) rotate(-3deg);
+        top: 100%;
+        left: -30%;
+    }
+}
+
+.name {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 110%;
+}
+
+
+  .right {
+    color: #002b59;
+    width: 100%;
+    margin-top: 100%; 
+    padding-right: 5%;
+}
+
+
+
+.right h1 {
 
     font-family: "Avenir next", sans-serif;
     font-size: 4rem;
-    color: #fff;
+
 
 }
 
-.left-sticky h3 {
+.right h3 {
 
     margin-bottom: 3rem;
     font-size: 1.6rem;
-    color: #fff;
+    font-family: "cochin", sans-serif;
+
 }
 
 p {
-    font-family: "cochin", serif;
-    text-align: justify;
-    color: #fff;
-    font-size: 1.6rem;
+    font-family: "Avenir next", sans-serif;
+    font-size: 1.2rem;
     padding: 2rem 0;
+
+}
+
+li {
+
+    font-family: "Avenir next", sans-serif;
+    text-align: justify;
+    font-size: 1.2rem;
+    list-style-type: none;
+
+
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+
 }
 
 
-.right img {
-    width: 65vw;
+footer {
+    margin-top: 15vh;
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    border-top: 1px solid #fff;
+    height: 30vh;
+    padding: 1rem 3rem;
+
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+
+.socials {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    width: 100%;
+    align-items: center;
+    color: #ce1800;
+    font-family: "cochin", serif;
+    font-weight: 700;
+    gap: 2rem;
+
+}
+
+
+.soc-link a,
+.socials p {
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color: #ce1800;
+    display: block;
+    font-family: "cochin", serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+
+}
+
+.soc-link a:hover {
+    color: #ffffff;
+    transform: scale(1.5);
+}
+
+@media only screen and (max-width: 1000px) {
+
+    main {
+
+    display: block;
+   
+}
+
+.left-sticky {
+    width: 100%;
     height: auto;
-    z-index: 111;
+
+}
+
+  .right {
+   
+    width: 100%;
+    margin-top: 20%; 
+    padding: 5%;
+}
+
+
+
+}
+@media only screen and (max-width: 700px) {
+    
+* {
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
 }
