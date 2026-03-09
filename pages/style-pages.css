@@ -33,7 +33,7 @@ body {
     width: 100%;
     z-index: 100;
     border-bottom: 1px solid #fff;
-    height: 5rem;
+    height: 7rem;
     padding: 1rem 3rem;
 
 
@@ -115,28 +115,11 @@ p {
     z-index: 111;
 }
 
-@media only screen and (max-width: 1199px) {
-    .left-sticky h1 {
-        font-size: 3rem;
-    }
-
-    .left-sticky h3 {
-        font-size: 1.5rem;
-    }
-
-    .left-sticky p {
-        font-size: 1rem;
-    }
-
-}
-
 
 @media only screen and (max-width: 1000px) {
 
-    #logo {
-        width: 1.5rem;
-        height: auto;
-    }
+
+
 
     .grid-container {
         display: flex;
@@ -155,18 +138,6 @@ p {
 
     }
 
-    .left-sticky h1 {
-        font-size: 3rem;
-
-    }
-
-    .left-sticky h3 {
-        font-size: 1.5rem;
-    }
-
-    .left-sticky p {
-        font-size: 1rem;
-    }
 
     .right {
         display: flex;
@@ -185,4 +156,14 @@ p {
     }
 
 
+}
+
+@media only screen and (max-width: 700px) {
+    * {
+        font-size: 9px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
 }
