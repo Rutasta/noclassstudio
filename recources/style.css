@@ -135,7 +135,7 @@ main {
 .fingers {
     position: relative;
     top: 45%;
-    width: 20%;
+    width: 18%;
 
     z-index: 11;
 }
@@ -229,11 +229,11 @@ main {
 
 .projects {
     position: relative;
-    top: 20%;
+    top: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
-    height: 200vh;
+    height: 230vh;
 
 }
 
@@ -249,7 +249,7 @@ main {
 
 .images-container img {
     width: 100%;
-    padding: 5%;
+
 
 }
 
@@ -258,6 +258,7 @@ main {
     width: 60%;
     display: flex;
     justify-content: center;
+    padding: 7%;
 }
 
 .images-container a:hover {
@@ -510,7 +511,7 @@ button:hover {
 
 .fingers-bottom {
     position: absolute;
-    width: 17rem;
+    width: 23%;
     bottom: -3rem;
     left: 50%;
 }
@@ -635,11 +636,14 @@ footer {
         width: 100%;
     }
 
-  
+
 
 }
 
 @media only screen and (max-width: 767px) {
+ * {
+        font-size: 12px;
+    }
 
     #navbar {
         height: 15%;
@@ -674,21 +678,23 @@ footer {
         flex-direction: row;
         justify-content: flex-start;
         height: 100%;
+        width: 300vw;
         overflow-x: auto;
         padding-left: 15%;
-        gap: 15%;
+        gap: 10%;
         align-items: center;
 
     }
 
     .images-container {
         display: contents;
+      
 
     }
 
     .images-container img {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
 
 
     }
@@ -697,7 +703,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 40%;
+        width: 100%;
+        padding: 0;
 
 
     }
@@ -733,9 +740,25 @@ footer {
         font-size: 5rem;
     }
 
+    .fingers-bottom {
+        position: absolute;
+        width: 25%;
+        bottom: -2rem;
+        left: 50%;
+    }
+
+    .fingers-bottom img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+
+ * {
+        font-size: 10px;
+    }
+
     .container {
 
         display: none;
@@ -802,7 +825,7 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-      
+
         pointer-events: auto;
     }
 
@@ -899,7 +922,9 @@ footer {
         display: block;
     }
 
-
+    footer {
+        font-size: 1rem;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
