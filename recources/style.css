@@ -42,8 +42,8 @@ body {
 }
 
 main {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -232,8 +232,8 @@ main {
     top: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
-    height: 230vh;
+    width: 100%;
+    height: 180%;
 
 }
 
@@ -309,8 +309,8 @@ main {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     align-content: center;
     transition: transform .5s ease-out;
     background-color: #e3ded9;
@@ -371,7 +371,7 @@ main {
 
 #curtain {
     position: relative;
-    height: 130dvh;
+    height: 130%;
 
 
 }
@@ -550,12 +550,12 @@ footer {
     display: flex;
     flex-direction: row;
     top: 35%;
-    height: 2rem;
     width: 100%;
     align-items: center;
     color: #ce1800;
     font-family: "cochin", "Garamond", serif;
     font-weight: 700;
+
     padding: 0 2rem;
     gap: 2rem;
 
@@ -569,7 +569,7 @@ footer {
     transition: transform 0.2s ease, color 0.2s ease;
     color: #ce1800;
     display: block;
-
+    font-size: 1.5rem;
 
 }
 
@@ -579,7 +579,7 @@ footer {
 }
 
 .footer-content img {
-    width: 100vw;
+    width: 100%;
     height: auto;
     position: absolute;
     bottom: 0;
@@ -599,7 +599,7 @@ footer {
 
     .projects {
 
-        height: 150vh;
+        height: 150%;
     }
 
     .contact-content {
@@ -661,7 +661,7 @@ footer {
         margin-top: 15%;
         position: relative;
         display: block;
-        height: 70vh;
+        height: 70%;
         overflow-x: auto;
     }
 
@@ -676,7 +676,7 @@ footer {
         flex-direction: row;
         justify-content: flex-start;
         height: 100%;
-        width: 300vw;
+        width: 300%;
         overflow-x: auto;
         padding-left: 20%;
         gap: 10%;
@@ -699,7 +699,8 @@ footer {
         padding: 2%;
 
     }
-/*
+
+    /*
     .images-container a.active {
         transform: scale(1.3);
     }
@@ -736,7 +737,7 @@ footer {
 
     .about-container img {
         transition: transform 0.3s ease;
-        width: 60%;
+        width: 45%;
         height: auto;
     }
 
@@ -797,7 +798,7 @@ footer {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        width: 100%;
         height: 7rem;
         transition: height 1s ease;
         pointer-events: none;
@@ -807,7 +808,7 @@ footer {
     .flexitems {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 100%;
         height: 100%;
         padding: 0;
         margin: 0;
@@ -819,9 +820,10 @@ footer {
         width: 100%;
         height: 100%;
         justify-content: flex-start;
-      
+
 
     }
+
     .nav-info a {
         font-size: 2rem;
     }
@@ -934,10 +936,6 @@ footer {
     #navbar.open .nav-link {
         display: block;
         margin: 5%;
-    }
-   
-    footer {
-        font-size: 1rem;
     }
 
     .socials {
