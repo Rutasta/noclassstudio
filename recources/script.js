@@ -5,21 +5,21 @@ const curtain = document.getElementById('contact-content');
 const curtainSection = document.getElementById('curtain');
 
 function onScroll() {
-    requestAnimationFrame(() => {
-        const sectionTop = curtainSection.offsetTop;
-        const scrollY = window.scrollY;
-        const progress = scrollY - sectionTop;
+  requestAnimationFrame(() => {
+    const sectionTop = curtainSection.offsetTop;
+    const scrollY = window.scrollY;
+    const progress = scrollY - sectionTop;
 
-        const liftLimit = curtain.offsetHeight / 4; // how much the curtain lifts
+    const liftLimit = curtain.offsetHeight / 4; // how much the curtain lifts
 
-        if (progress >= 0 && progress <= liftLimit) {
-            curtain.style.transform = `translateY(-${progress}px)`;
-        } else if (progress < 0) {
-            curtain.style.transform = 'translateY(0)';
-        } else {
-            curtain.style.transform = `translateY(-${liftLimit}px)`;
-        }
-    });
+    if (progress >= 0 && progress <= liftLimit) {
+      curtain.style.transform = `translateY(-${progress}px)`;
+    } else if (progress < 0) {
+      curtain.style.transform = 'translateY(0)';
+    } else {
+      curtain.style.transform = `translateY(-${liftLimit}px)`;
+    }
+  });
 }
 
 window.addEventListener('scroll', onScroll);
@@ -50,7 +50,7 @@ document.addEventListener('mousemove', (e) => {
   pupil.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
 });
 
-// hadn 
+// 
 const eye2 = document.querySelector('.eye2');
 const pupil2 = document.querySelector('.pupil2');
 
@@ -72,7 +72,7 @@ document.addEventListener('mousemove', (e) => {
   pupil2.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
 });
 
-
+// Cursor Hand
 const img = document.getElementById("followImg");
 
 let mouseX = window.innerWidth / 2;
@@ -90,7 +90,7 @@ function animate() {
   currentX += (mouseX - currentX) * 0.15;
   currentY += (mouseY - currentY) * 0.15;
 
- img.style.transform = `
+  img.style.transform = `
   translate(${currentX}px, ${currentY}px)
   translate(0, 0)
 `;
@@ -106,7 +106,7 @@ const overlay = document.querySelector('.overlay');
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-  // adjust 0.1 for subtle movement
+
   overlay.style.transform = `translateY(${scrollY * 0.1}px)`;
 });
 const nav = document.getElementById('navbar');
@@ -122,3 +122,48 @@ document.querySelectorAll('.nav-link a').forEach(link => {
 });
 
 
+// 
+const items = document.querySelectorAll('.images-container img');
+
+function updateScale() {
+  const center = window.innerWidth / 2;
+
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const itemCenter = rect.left + rect.width / 2;
+
+    const distance = Math.abs(center - itemCenter);
+
+    if (distance < 200) {
+      item.style.transform = "scale(1.4)";
+    } else {
+      item.style.transform = "scale(1)";
+    }
+  });
+}
+
+document.querySelector('.row').addEventListener('scroll', updateScale);
+window.addEventListener('load', updateScale);
+
+
+// about
+
+const door = document.querySelector('.about-container a img');
+
+function animation() {
+  const rect = door.getBoundingClientRect();
+  const doorCenter = rect.top + rect.height / 2;
+
+  const center = window.innerHeight / 2;
+  const difference = Math.abs(center - doorCenter);
+
+  if (difference < 200) {
+       door.classList.add("wobble-active");
+  } else {
+    door.classList.remove("wobble-active");
+  }
+ 
+}
+
+window.addEventListener('scroll', animation);
+window.addEventListener('load', animation);

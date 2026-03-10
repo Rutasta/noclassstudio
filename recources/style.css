@@ -119,7 +119,7 @@ main {
     transition: transform 0.2s ease, color 0.2s ease;
     color: #ce1800;
     display: block;
-    font-family: "cochin", serif;
+    font-family: "cochin", "Garamond", serif;
     font-weight: 700;
     font-size: 1.5rem;
     padding-left: 2rem;
@@ -292,7 +292,7 @@ main {
 .sticky-label p {
 
     color: #fff;
-    font-family: "cochin", serif;
+    font-family: "cochin", "Garamond", serif;
     font-weight: 700;
     font-size: 1.3rem;
     transform: rotate(-90deg);
@@ -328,7 +328,7 @@ main {
 .about-container p {
     font-size: 5rem;
     line-height: 5rem;
-    font-family: "Avenir Next", sans-serif;
+    font-family: "Avenir Next", "Helvetica", sans-serif;
     font-weight: 700;
     color: #ffffff;
     width: 100%;
@@ -403,8 +403,8 @@ main {
 .contact-content P {
 
     font-size: 7rem;
-    line-height: 7rem;
-    font-family: "Avenir Next", sans-serif;
+    line-height: 8rem;
+    font-family: "Avenir Next", "Helvetica", sans-serif;
     font-weight: 700;
     color: #ffffff;
     z-index: 21;
@@ -414,7 +414,7 @@ main {
 }
 
 .sentence-form {
-
+    font-family: "cochin", "Garamond", serif;
     z-index: 22;
     width: 60%;
 }
@@ -425,13 +425,13 @@ main {
     display: inline-flex;
     align-items: baseline;
     width: 100%;
+    padding-bottom: 5%;
 
 }
 
 label {
     text-wrap: nowrap;
     line-height: 1.5;
-    font-family: "cochin", serif;
     font-size: 1.5rem;
     color: #002b59;
     padding-right: 2%;
@@ -442,7 +442,7 @@ input::placeholder,
 textarea,
 textarea::placeholder {
     line-height: 1.5;
-    font-family: "cochin", serif;
+    font-family: "cochin", "Garamond", serif;
     font-size: 1.5rem;
     color: #002b59;
     width: 100%;
@@ -554,7 +554,7 @@ footer {
     width: 100%;
     align-items: center;
     color: #ce1800;
-    font-family: "cochin", serif;
+    font-family: "cochin", "Garamond", serif;
     font-weight: 700;
     padding: 0 2rem;
     gap: 2rem;
@@ -569,9 +569,7 @@ footer {
     transition: transform 0.2s ease, color 0.2s ease;
     color: #ce1800;
     display: block;
-    font-family: "cochin", serif;
-    font-weight: 700;
-    font-size: 1.2rem;
+
 
 }
 
@@ -641,7 +639,7 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
- * {
+    * {
         font-size: 12px;
     }
 
@@ -680,7 +678,7 @@ footer {
         height: 100%;
         width: 300vw;
         overflow-x: auto;
-        padding-left: 15%;
+        padding-left: 20%;
         gap: 10%;
         align-items: center;
 
@@ -688,13 +686,6 @@ footer {
 
     .images-container {
         display: contents;
-      
-
-    }
-
-    .images-container img {
-        width: 100%;
-        height: auto;
 
 
     }
@@ -703,11 +694,22 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
-        padding: 0;
-
+        width: 60vw;
+        height: auto;
+        padding: 2%;
 
     }
+
+    .images-container a.active {
+        transform: scale(1.3);
+    }
+
+    .images-container img {
+
+        width: auto;
+        height: 100%;
+    }
+
 
     .sticky-label {
         display: none;
@@ -722,6 +724,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        height: 90vh;
 
     }
 
@@ -730,11 +733,18 @@ footer {
         text-align: center;
     }
 
-    .about-img img {
+
+    .about-container img {
+        transition: transform 0.3s ease;
         width: 50%;
         height: auto;
-
     }
+
+    .about-container img.wobble-active {
+        animation: wobble 0.6s infinite alternate;
+        transform: scale(1.08);
+    }
+
 
     .contact-content p {
         font-size: 5rem;
@@ -755,7 +765,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
 
- * {
+    * {
         font-size: 10px;
     }
 
@@ -843,7 +853,6 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 100%;
         padding: 40% 0;
         opacity: 0;
         pointer-events: none;
@@ -861,7 +870,7 @@ footer {
         background: none;
         border: none;
         padding: 0;
-        width: 2rem;
+        width: 3rem;
         height: 2rem;
         position: relative;
         cursor: pointer;
@@ -913,17 +922,25 @@ footer {
     }
 
     /* LINKS — CLOSED */
-    .nav-link {
-        display: none;
+    .nav-link a {
+        display: block;
+        padding: 0;
+
     }
 
     /* LINKS — OPEN */
     #navbar.open .nav-link {
         display: block;
+        margin: 5%;
     }
 
     footer {
         font-size: 1rem;
+    }
+
+    .socials {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

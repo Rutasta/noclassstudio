@@ -195,11 +195,11 @@ main {
 }
 
 .hand:hover {
-    animation: wobble 1s infinite alternate;
+    animation: wobble1 1s infinite alternate;
     transform: scale(1.2);
 }
 
-@keyframes wobble {
+@keyframes wobble1 {
     from {
         transform: scale(1.2) rotate(3deg);
         top: 100%;
@@ -221,10 +221,10 @@ main {
 }
 
 
-  .right {
+.right {
     color: #002b59;
     width: 100%;
-    margin-top: 100%; 
+    margin-top: 100%;
     padding-right: 5%;
 }
 
@@ -327,33 +327,41 @@ footer {
 
     main {
 
-    display: block;
-   
+        display: block;
+
+    }
+
+    .left-sticky {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .right {
+
+        width: 100%;
+        margin-top: 20%;
+        padding: 5%;
+    }
+
+
+
 }
 
-.left-sticky {
-    width: 100%;
-    height: auto;
-
-}
-
-  .right {
-   
-    width: 100%;
-    margin-top: 20%; 
-    padding: 5%;
-}
-
-
-
-}
 @media only screen and (max-width: 700px) {
-    
-* {
-    font-size: 9px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+    * {
+        font-size: 9px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    .right h1 {
+
+    font-size: 3rem;
 
 }
+
+
 }
