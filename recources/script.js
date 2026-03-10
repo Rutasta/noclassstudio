@@ -122,7 +122,7 @@ document.querySelectorAll('.nav-link a').forEach(link => {
 });
 
 
-// 
+/*
 const items = document.querySelectorAll('.images-container img');
 
 function updateScale() {
@@ -145,7 +145,7 @@ function updateScale() {
 document.querySelector('.row').addEventListener('scroll', updateScale);
 window.addEventListener('load', updateScale);
 
-
+*/
 // about
 
 const door = document.querySelector('.about-container a img');
