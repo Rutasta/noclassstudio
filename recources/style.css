@@ -10,7 +10,7 @@
 
 html,
 body {
-    height: 100%;
+    height: 100dvh;
     margin: 0;
     background-color: #e3ded9;
 
@@ -30,8 +30,8 @@ body {
     position: fixed;
     top: -50%;
     left: 0;
-    width: 150%;
-    height: 150%;
+    width: 150dvw;
+    height: 150dvh;
     object-fit: cover;
     pointer-events: none;
     z-index: 999;
@@ -42,8 +42,8 @@ body {
 }
 
 main {
-    height: 100%;
-    width: 100%;
+    height: 100dvh;
+    width: 100dvw;
 }
 
 
@@ -233,7 +233,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 180%;
+    height: 210%;
 
 }
 
@@ -315,7 +315,7 @@ main {
     transition: transform .5s ease-out;
     background-color: #e3ded9;
     margin: 0;
-    padding: 7%;
+    padding: 7% 10%;
     background-size: cover;
     background-attachment: fixed;
     /* Important! */
@@ -331,7 +331,7 @@ main {
     font-family: "Avenir Next", "Helvetica", sans-serif;
     font-weight: 700;
     color: #ffffff;
-    width: 100%;
+    width: 70%;
     align-self: center;
 
 }
@@ -511,7 +511,7 @@ button:hover {
 
 .fingers-bottom {
     position: absolute;
-    width: 23%;
+    width: 21%;
     bottom: -3rem;
     left: 50%;
 }
@@ -555,7 +555,6 @@ footer {
     color: #ce1800;
     font-family: "cochin", "Garamond", serif;
     font-weight: 700;
-
     padding: 0 2rem;
     gap: 2rem;
 
@@ -569,7 +568,7 @@ footer {
     transition: transform 0.2s ease, color 0.2s ease;
     color: #ce1800;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
 
 }
 
@@ -589,7 +588,7 @@ footer {
 
 @media only screen and (max-width: 991px) {
     * {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .fingers {
@@ -599,7 +598,7 @@ footer {
 
     .projects {
 
-        height: 150%;
+        height: 160%;
     }
 
     .contact-content {
@@ -634,8 +633,6 @@ footer {
         width: 100%;
     }
 
-
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -648,7 +645,27 @@ footer {
         width: 100%;
 
     }
+    .pupil, .pupil2 {
+         animation: eyeMove 3s infinite alternate-reverse;
 
+    }
+
+    @keyframes eyeMove {
+        0% {
+           
+            left: 50%;
+            top: 50%;
+        }
+
+       
+
+        100% {
+          
+            left: 30%;
+            top: 75%;
+        }
+    }
+    }
     .hand-container {
         display: none;
     }
@@ -694,8 +711,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60vw;
-        height: auto;
+        height: 90%;
         padding: 2%;
 
     }
@@ -725,13 +741,14 @@ footer {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        height: 80vh;
+        height: 100%;
 
     }
 
     .about-container p {
         font-size: 4rem;
         text-align: center;
+        width: 100%;
     }
 
 
@@ -745,7 +762,7 @@ footer {
         animation: wobble 0.6s infinite alternate;
         transform: scale(1.08);
     }
-
+ 
 
     .contact-content p {
         font-size: 5rem;
@@ -762,12 +779,11 @@ footer {
         width: 100%;
         height: auto;
     }
-}
 
 @media only screen and (max-width: 600px) {
 
     * {
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .container {
@@ -819,9 +835,9 @@ footer {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        justify-content: flex-start;
-
-
+        padding-bottom: 30%;
+        justify-content: space-between;
+       
     }
 
     .nav-info a {
@@ -858,7 +874,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 40% 0;
+        
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.3s ease;
@@ -936,6 +952,16 @@ footer {
     #navbar.open .nav-link {
         display: block;
         margin: 5%;
+    }
+    .images-container a {
+        height: 70%;
+    }
+    .about-container {
+      
+        height: 70%;
+    }
+    .about-container p{
+        font-size: 3rem;
     }
 
     .socials {

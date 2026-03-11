@@ -183,9 +183,6 @@ main {
 .hand {
     position: absolute;
     width: 140%;
-    /* size relative to container */
-
-    /* Use percentages instead of px */
     top: 90%;
     left: -20%;
     rotate: calc(-20deg);
@@ -357,11 +354,64 @@ footer {
         box-sizing: border-box;
 
     }
+
     .right h1 {
 
-    font-size: 3rem;
+        font-size: 3rem;
 
-}
+    }
 
+    .hand {
+
+        animation: rotateHand 2s infinite alternate-reverse;
+
+    }
+
+    @keyframes rotateHand {
+        0% {
+            transform: rotate(-5deg);
+            top: 90%;
+            left: -10%;
+
+        }
+
+        50% {
+            transform: rotate(5deg);
+            top: 90%;
+            left: 0%;
+        }
+
+        100% {
+            transform: rotate(10deg);
+            top: 90%;
+            left: -10%;
+        }
+    }
+
+
+
+    .pupil, .pupil2 {
+       
+        animation: eyeMove 1s infinite alternate-reverse;
+
+    }
+
+    @keyframes eyeMove {
+        0% {
+           
+            left: 35%;
+            top: 50%;
+        }
+
+       
+
+        100% {
+          
+            left: 65%;
+            top: 75%;
+        }
+    }
+   
+  
 
 }
