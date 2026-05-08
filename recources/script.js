@@ -158,23 +158,27 @@ function animation() {
   const difference = Math.abs(center - doorCenter);
 
   if (difference < 200) {
-       door.classList.add("wobble-active");
+    door.classList.add("wobble-active");
   } else {
     door.classList.remove("wobble-active");
   }
- 
+
 }
 
 window.addEventListener('scroll', animation);
 window.addEventListener('load', animation);
 
 
-    const loader = document.getElementById('loader');
- 
-    // Remove loader when page is fully loaded
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        loader.classList.add('done');
-        loader.addEventListener('transitionend', () => loader.remove());
-      }, 3400); 
-    });
+const loader = document.getElementById('loader');
+
+// Remove loader when page is fully loaded
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loader.classList.add('done');
+    loader.addEventListener('transitionend', () => loader.remove());
+  }, 3400);
+});
+
+window.addEventListener('load', () => {
+  document.getElementById('stage').style.display = 'none';
+});

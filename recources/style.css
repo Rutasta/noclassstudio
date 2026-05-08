@@ -1,41 +1,4 @@
-#loader {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: url(../landing/Texturelabs_LensFX_212L.jpg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    
-    }
- 
-    .ball {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      background: #ce1800;
-      animation: bounce 3s ease-in;
-    }
- 
-  
- 
-    @keyframes bounce {
-      0% { transform: translateY(-100%); }
-      25%  { transform: translateY(400%);  }
-      50% { transform: translateY(-100%); }
-      100%  { transform: translateY(600%);  }
-    
-    }
- 
- 
- 
-    /* fade out */
-    #loader.done {
-      opacity: 0;
-      transition: opacity 0s;
-      pointer-events: none;
-    }
+
     
 * {
     font-size: 16px;
@@ -44,6 +7,7 @@
     box-sizing: border-box;
 
 }
+
 
 html,
 body {
@@ -58,6 +22,37 @@ body {
 *::after,
 *:hover {
     cursor: none !important;
+}
+
+
+.loader-stage {
+  z-index: 99999;
+  background-color: #d4e9ff; /* fallback if image fails to load */
+  background-image: url("../landing/texturebackground.png");
+  background-position: center;  /* keeps it centered */
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  
+}
+.eye-loader {
+  position: absolute;
+  width: 60px; height: 60px;
+  animation: wander 6s ease-in-out infinite;
+}
+
+.eye-loader img {
+  width: 100%; height: 100%;
+}
+
+@keyframes wander {
+  0%   { top: 10%; left: 15%; }
+  20%  { top: 5%;  left: 60%; }
+  40%  { top: 50%; left: 75%; }
+  60%  { top: 70%; left: 20%; }
+  80%  { top: 30%; left: 5%;  }
+  100% { top: 10%; left: 15%; }
 }
 
 
@@ -345,7 +340,6 @@ main {
 .about-container {
 
     position: relative;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
