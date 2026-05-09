@@ -180,5 +180,4 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('load', () => {
-  document.getElementById('stage').style.display = 'none';
-});
+ document.getElementById('stage').style.display = 'none';});
