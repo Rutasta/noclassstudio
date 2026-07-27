@@ -169,15 +169,3 @@ window.addEventListener('scroll', animation);
 window.addEventListener('load', animation);
 
 
-const loader = document.getElementById('loader');
-
-// Remove loader when page is fully loaded
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    loader.classList.add('done');
-    loader.addEventListener('transitionend', () => loader.remove());
-  }, 3400);
-});
-
-window.addEventListener('load', () => {
- document.getElementById('stage').style.display = 'none';});
